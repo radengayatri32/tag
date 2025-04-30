@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background:
+        linear-gradient(rgba(10, 10, 18, 0.85), rgba(10, 10, 18, 0.9)),
+        url('https://cdn.wallpapersafari.com/50/72/NMol2I.jpg') center/cover fixed;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        url('https://cdn.wallpapersafari.com/50/72/NMol2I.jpg') center/cover fixed;
+    filter: blur(15px) brightness(0.6);
+    z-index: -2;
+    transform: scale(1.05);
+}
+
+
+
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 25% 25%, rgba(41, 103, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(156, 39, 176, 0.15) 0%, transparent 50%);
+    z-index: -1;
+}
+
+
+
+
+body > form {
+    background-color: #121220;
+    border: 1px solid #2a2a3a;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+body > form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2967ff, hsl(212, 100%, 68%));
+    animation: rainbow 5s linear infinite;
+}
+
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(41, 103, 255, 0.5);
+}
+
+
+
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #1e1e2d;
+    border: 1px solid #2a2a3a;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2967ff;
+    box-shadow: 0 0 0 2px rgba(41, 103, 255, 0.3);
+}
+
+
+
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2a2a3a;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+    transition: all 0.2s ease;
+}
+
+
+input[type="radio"]:checked {
+    border-color: #2967ff;
+    background-color: #2967ff;
+}
+
+
+input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(41, 103, 255, 0.3);
+}
+label[for="output_o"],
+label[for="output_n"] {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+input[type="submit"] {
+    background: linear-gradient(135deg, #2967ff,hsl(212, 100%, 68%));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+body > div {
+    background-color: #121220;
+    border: 1px solid #2a2a3a;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+br {
+    margin-bottom: 1rem;
+}
+form > div {
+    margin-bottom: 1.5rem;
+}
+
+.result-box a {
+    display: inline-block;
+    margin-top: 1rem;              
+    padding: 0.8rem 1.5rem;        
+    background: linear-gradient(135deg, #2967ff, hsl(212, 100%, 68%));
+    color: #fff;                    
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;          
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.result-box a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
